@@ -1,0 +1,9 @@
+           - uses: actions/setup-java@v4
+             with:
+               distribution: temurin
+               java-version: '25'
+               cache: maven
+               cache-dependency-path: ServerPack/pom.xml
+
+           - name: Compilar
+             run: mvn -B -ntp -f ServerPack/pom.xml package
